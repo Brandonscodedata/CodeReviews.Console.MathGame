@@ -6,7 +6,7 @@ namespace MathGameAcademy
     {
         public static List<int[]> gameList = new List<int[]>();
         public static List<char> operatorList = new List<char>();
-        static void Main(string[] args)
+        static void Main(string[] args) 
         {
             do
             {
@@ -60,7 +60,7 @@ namespace MathGameAcademy
 
 
                     int resultGuess = GetNumber(randomNumbers, _operator);
-                    int correctResult = Math.MathCalculation(randomNumbers, _operator);
+                    int correctResult = Calculator.MathCalculation(randomNumbers, _operator);
                     if (resultGuess == correctResult)
                     {
                         Console.WriteLine("Correct!");
@@ -87,8 +87,7 @@ namespace MathGameAcademy
                 }
                 
                 bool check = YesOrNo("Do you want to delete the game history? (y/n)");
-                check = char.TryParse(Console.ReadLine(), out char deleteChoice);
-                if (check && (deleteChoice == 'y' || deleteChoice == 'Y'))
+                if (check)
                 {
                     gameList.Clear();
                     operatorList.Clear();

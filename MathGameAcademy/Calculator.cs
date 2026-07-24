@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MathGameAcademy
 {
-    internal class Math
+    internal class Calculator
     {
         public static int MathCalculation(int[] random, char _operator)
         {
@@ -25,6 +25,6 @@ namespace MathGameAcademy
                 default:
                     throw new ArgumentException("Invalid operator.");
             }
-        } 
+        }
     }
 }
