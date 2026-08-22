@@ -32,7 +32,7 @@ jobs:
 
               Thanks for submitting your project! I will review it soon.
 
-              📋 **Please check the dashboard** to make sure the project was submitted successfully.
+              📋 [**Please check the dashboard**](https://thecsharpacademy.com/Dashboard) to make sure the project is marked as **Pending**.
 
               ⚠️ If it's not there, submit it manually using the URL for this PR.`
             })
