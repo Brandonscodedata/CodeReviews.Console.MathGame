@@ -1,7 +1,5 @@
-# This is a basic workflow to help you get started with Actions
 name: Project Submission
 
-# Controls when the workflow will run
 on:
   pull_request_target: 
     branches: [ "main" ]
@@ -16,23 +14,5 @@ permissions:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  comment:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Comment on PR
-        uses: actions/github-script@v7
-        with:
-          script: |
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: `## 🚀 Project Submitted!
-
-              Thanks for submitting your project! I will review it soon.
-
-              📋 [**Please check the dashboard**](https://thecsharpacademy.com/Dashboard) to make sure the project is marked as **Pending**.
-
-              ⚠️ If it's not there, submit it manually using the URL for this PR.`
-            })
+  call-submission-workflow:
+    uses: the-csharpacademy/base-repo/.github/workflows/project-submision.yml@main
